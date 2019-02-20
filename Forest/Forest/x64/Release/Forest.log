@@ -1,0 +1,42 @@
+﻿  Forest.cpp
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C3646: 'GetState': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C2059: syntax error: '('
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C2238: unexpected token(s) preceding ';'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C2146: syntax error: missing ')' before identifier 'new_state'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C3646: 'new_state': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C2059: syntax error: ')'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C2065: 'Tree': undeclared identifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C2923: 'std::vector': 'Tree' is not a valid template type argument for parameter '_Ty'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C3203: 'vector': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+Forest.cpp(26): error C2039: 'GetState': is not a member of 'Matrix'
+  c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(9): note: see declaration of 'Matrix'
+Forest.cpp(30): warning C4245: 'initializing': conversion from 'int' to 'std::size_t', signed/unsigned mismatch
+Forest.cpp(32): warning C4245: 'initializing': conversion from 'int' to 'std::size_t', signed/unsigned mismatch
+Forest.cpp(34): error C2039: 'GetState': is not a member of 'Matrix'
+  c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(9): note: see declaration of 'Matrix'
+Forest.cpp(55): error C2360: initialization of 'fire_quantity' is skipped by 'case' label
+  Forest.cpp(29): note: see declaration of 'fire_quantity'
+Forest.cpp(65): error C2360: initialization of 'fire_quantity' is skipped by 'case' label
+  Forest.cpp(29): note: see declaration of 'fire_quantity'
+  main.cpp
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C3646: 'GetState': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C2059: syntax error: '('
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(18): error C2238: unexpected token(s) preceding ';'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C2146: syntax error: missing ')' before identifier 'new_state'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C3646: 'new_state': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(20): error C2059: syntax error: ')'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C2065: 'Tree': undeclared identifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C2923: 'std::vector': 'Tree' is not a valid template type argument for parameter '_Ty'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C3203: 'allocator': unspecialized class template can't be used as a template argument for template parameter '_Alloc', expected a real type
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\matrix_struct.h(28): error C3203: 'vector': unspecialized class template can't be used as a template argument for template parameter '_Ty', expected a real type
+  matrix_struct.cpp
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\Forest.h(9): error C3646: 'GetForest': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\Forest.h(9): error C2059: syntax error: '('
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\Forest.h(9): error C2238: unexpected token(s) preceding ';'
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\Forest.h(11): error C3646: 'forest_': unknown override specifier
+c:\users\валя\documents\visual studio 2015\projects\forest\forest\Forest.h(11): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+matrix_struct.cpp(44): warning C4365: 'argument': conversion from 'int' to 'unsigned __int64', signed/unsigned mismatch
+matrix_struct.cpp(45): warning C4365: 'argument': conversion from 'int' to 'unsigned __int64', signed/unsigned mismatch
