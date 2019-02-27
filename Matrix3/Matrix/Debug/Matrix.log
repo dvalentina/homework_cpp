@@ -1,0 +1,6 @@
+﻿  matrix.cpp
+  main.cpp
+  Generating Code...
+c:\users\валя\documents\visual studio 2015\projects\matrix\matrix\matrix.cpp(108): warning C4715: 'Matrix::operator*': not all control paths return a value
+  Matrix.vcxproj -> C:\Users\Валя\Documents\Visual Studio 2015\Projects\Matrix\Debug\Matrix.exe
+  Matrix.vcxproj -> C:\Users\Валя\Documents\Visual Studio 2015\Projects\Matrix\Debug\Matrix.pdb (Full PDB)

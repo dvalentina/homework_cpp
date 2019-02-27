@@ -1,0 +1,8 @@
+﻿  main.cpp
+  Generating code
+  90 of 137 functions (65.7%) were compiled, the rest were copied from previous compilation.
+    74 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Matrix.vcxproj -> C:\Users\Валя\Documents\Visual Studio 2015\Projects\Matrix2\x64\Release\Matrix.exe
+  Matrix.vcxproj -> C:\Users\Валя\Documents\Visual Studio 2015\Projects\Matrix2\x64\Release\Matrix.pdb (Full PDB)
