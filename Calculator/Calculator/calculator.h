@@ -7,22 +7,17 @@
 class Calculator
 {
 public:
-	Calculator(int n_1, int n_2);
-	virtual ~Calculator();
+	Calculator() = default;
+	virtual ~Calculator() = default;
 
-	double Addition() const;
-	double Difference() const;
-	double Multiplication() const;
-	double Division() const;
-	double PowerRaising() const;
-	int SignsMatching() const;
+	int Addition(const int number_1, const int number_2) const;
+	int Difference(const int number_1, const int number_2) const;
+	int Multiplication(const int number_1, const int number_2) const;
+	int Division(const int number_1, const int number_2) const;
+	int PowerRaising(const int number_1, const int number_2) const;
+	bool SignsEqual(const int number_1, const int number_2) const;
 
-	int NOD() const;
-	int NOK() const;
-
-private:
-	int number_1;
-	int number_2;
+	int NOD(const int number_1, const int number_2) const;
+	int NOK(const int number_1, const int number_2) const;
 };
 
-void PrintCalculator(const std::vector<Calculator> &calculators);
