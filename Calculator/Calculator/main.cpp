@@ -5,6 +5,22 @@
 
 int main()
 {
+    //==============================================
+    //==================TESTS=======================
+    //==============================================
+    TestAddition();
+    TestDifference();
+    TestMultiplication();
+    TestDivision();
+    TestPowerRaising();
+    TestSignsMatching();
+
+    TestNOD();
+    TestNOK();
+    //==============================================
+    //================END=OF=TESTS==================
+    //==============================================
+
     Calculator calc;
 
     std::cout << "sum of two numbers = " << calc.Addition(45, 60) << std::endl;
@@ -24,17 +40,6 @@ int main()
         std::cout << "signs are not equal" << std::endl;
     }
 
-    //==============================================
-    //==================TESTS=======================
-    //==============================================
-    TestAddition();
-    TestDifference();
-    TestMultiplication();
-    TestDivision();
-    TestPowerRaising();
-    TestSignsMatching();
-
-    TestNOD();
-    TestNOK();
+    return 0;
 }
 	

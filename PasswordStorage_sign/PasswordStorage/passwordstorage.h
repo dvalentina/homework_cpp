@@ -6,6 +6,12 @@
 std::string EncodeString(const std::string& string_to_encode);
 std::string DecodeString(const std::string& string_to_decode);
 
+/*struct StorageEntry
+{
+    std::string login;
+    std::string password;
+};*/
+
 class PasswordStorage
 {
 public:
@@ -13,7 +19,7 @@ public:
     void PrintStorage() const;
     void TellPassword() const;
     void ChangeStoragePassword();
-    void Add(const StorageEntry user);
+    void Add(const StorageEntry& user);
     int GetPasswordHash6() const;
 private:
     HashTable hashtable_;

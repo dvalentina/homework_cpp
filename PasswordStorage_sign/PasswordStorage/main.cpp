@@ -18,7 +18,7 @@ int main()
 
 void Start()
 {
-    size_t size_of_storage = 1013;
+    const size_t size_of_storage = 1013;
     PasswordStorage password_storage(size_of_storage);
     FillPasswordStorage(password_storage);
     WelcomeToPasswordStorage(password_storage);

@@ -38,7 +38,7 @@ int PasswordStorage::GetPasswordHash6() const
     return password_hash6_;
 }
 
-void PasswordStorage::Add(const StorageEntry user)
+void PasswordStorage::Add(const StorageEntry& user)
 {
     hashtable_.Add(user);
 }

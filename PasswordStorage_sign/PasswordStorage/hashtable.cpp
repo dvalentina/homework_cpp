@@ -5,25 +5,27 @@
 #include <string>
 #include <iostream>
 
-int GetHash1(const std::string value)
+struct StorageEntry;
+
+int GetHash1(const std::string& value)
 {
     //Возвращает 1
     return 1;
 }
 
-int GetHash2(const std::string value)
+int GetHash2(const std::string& value)
 {
     //Возвращает ASCII код первой буквы строки
     return (int)value[0];
 }
 
-int GetHash3(const std::string value)
+int GetHash3(const std::string& value)
 {
     //Возвращает длину строки
     return (int)value.size();
 }
 
-int GetHash4(const std::string value)
+int GetHash4(const std::string& value)
 {
     //Возвращает сумму ASCII кодов букв строки
     int hash = 0;
@@ -34,7 +36,7 @@ int GetHash4(const std::string value)
     return hash;
 }
 
-int GetHash5(const std::string value)
+int GetHash5(const std::string& value)
 {
     int hash = 0;
     for (size_t i = 0; i < value.size(); ++i)
@@ -44,7 +46,7 @@ int GetHash5(const std::string value)
     return hash;
 }
 
-int GetHash6(const std::string value)
+int GetHash6(const std::string& value)
 {
     int hash = 0;
     if (value.size() == 0)
@@ -91,7 +93,7 @@ int HashTable::GetHash(const std::string& login) const
     return GetHash6(login) % (int)size_;
 }
 
-bool HashTable::Has(const StorageEntry encoded_value) const
+bool HashTable::Has(const StorageEntry& encoded_value) const
 {
     int is_there = 0;
     const int string_hash = this->GetHash(encoded_value);
@@ -106,7 +108,7 @@ bool HashTable::Has(const StorageEntry encoded_value) const
     return false;
 }
 
-bool HashTable::Has(const std::string login) const
+bool HashTable::Has(const std::string& login) const
 {
     int is_there = 0;
     const int string_hash = this->GetHash(login);

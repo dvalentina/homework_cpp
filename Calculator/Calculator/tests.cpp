@@ -25,6 +25,7 @@ void TestAddition()
     ASSERT_EQUAL(calculator.Addition(-1, 2), 1);
     ASSERT_EQUAL(calculator.Addition(-1, -2), -3);
     ASSERT_EQUAL(calculator.Addition(-1, 1), 0);
+    ASSERT_EQUAL(calculator.Addition(50000, 50000), 100000);
     if (fails_count == 0)
     {
         std::cerr << "TestAddition: OK" << std::endl;
@@ -47,6 +48,7 @@ void TestDifference()
     ASSERT_EQUAL(calculator.Difference(4, 4), 0);
     ASSERT_EQUAL(calculator.Difference(4, 0), 4);
     ASSERT_EQUAL(calculator.Difference(-1, -2), 1);
+    ASSERT_EQUAL(calculator.Difference(60000, 50000), 10000);
     if (fails_count == 0)
     {
         std::cerr << "TestDifference: OK" << std::endl;
@@ -69,6 +71,7 @@ void TestMultiplication()
     ASSERT_EQUAL(calculator.Multiplication(0, 3), 0);
     ASSERT_EQUAL(calculator.Multiplication(-5, 3), -15);
     ASSERT_EQUAL(calculator.Multiplication(-1, -1), 1);
+    ASSERT_EQUAL(calculator.Multiplication(40000, -40000), -1600000000);
     if (fails_count == 0)
     {
         std::cerr << "TestMultiplication: OK" << std::endl;
@@ -91,6 +94,7 @@ void TestDivision()
     ASSERT_EQUAL(calculator.Division(6, -2), -3);
     ASSERT_EQUAL(calculator.Division(-6, -2), 3);
     ASSERT_EQUAL(calculator.Division(0, 1), 0);
+    ASSERT_EQUAL(calculator.Division(50000, 50000), 1);
     if (fails_count == 0)
     {
         std::cerr << "TestDivision: OK" << std::endl;
@@ -116,6 +120,8 @@ void TestPowerRaising()
     ASSERT_EQUAL(calculator.PowerRaising(0, 0), 1);
     ASSERT_EQUAL(calculator.PowerRaising(-3, 2), 9);
     ASSERT_EQUAL(calculator.PowerRaising(-3, 3), -27);
+    ASSERT_EQUAL(calculator.PowerRaising(-1, 1600000000), 1);
+    ASSERT_EQUAL(calculator.PowerRaising(40000, 2), 1600000000);
     if (fails_count == 0)
     {
         std::cerr << "TestPowerRaising: OK" << std::endl;
@@ -136,6 +142,9 @@ void TestSignsMatching()
     ASSERT_EQUAL(calculator.SignsEqual(-2, -3), true);
     ASSERT_EQUAL(calculator.SignsEqual(-2, 3), false);
     ASSERT_EQUAL(calculator.SignsEqual(2, -2), false);
+    ASSERT_EQUAL(calculator.SignsEqual(50000, 60000), true);
+    ASSERT_EQUAL(calculator.SignsEqual(50000, -60000), false);
+    ASSERT_EQUAL(calculator.SignsEqual(-50000, -60000), true);
     if (fails_count == 0)
     {
         std::cerr << "TestSignsEqual: OK" << std::endl;
@@ -161,6 +170,7 @@ void TestNOD()
     ASSERT_EQUAL(calculator.NOD(3, 9), 3);
     ASSERT_EQUAL(calculator.NOD(6, 20), 2);
     ASSERT_EQUAL(calculator.NOD(12, 18), 6);
+    ASSERT_EQUAL(calculator.NOD(50000, 60000), 10000);
     if (fails_count == 0)
     {
         std::cerr << "TestNOD: OK" << std::endl;
@@ -184,6 +194,7 @@ void TestNOK()
     ASSERT_EQUAL(calculator.NOK(6, 8), 24);
     ASSERT_EQUAL(calculator.NOK(8, 6), 24);
     ASSERT_EQUAL(calculator.NOK(1, 2), 2);
+    ASSERT_EQUAL(calculator.NOK(50000, 60000), 300000);
     if (fails_count == 0)
     {
         std::cerr << "TestNOK: OK" << std::endl;

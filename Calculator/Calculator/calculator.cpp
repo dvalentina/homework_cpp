@@ -32,7 +32,7 @@ int Calculator::PowerRaising(const int number_1, const int number_2) const
 	
 bool Calculator::SignsEqual(const int number_1, const int number_2) const
 {   
-	if (number_1 * number_2 > 0)
+	if ((number_1 > 0 && number_2 > 0) || (number_1 < 0 && number_2 < 0))
 	{
 		return 1;
 	}
@@ -78,13 +78,13 @@ int Calculator::NOK(const int number_1, const int number_2) const
 {
     while (NOD(number_1, number_2) != 0 && number_1 != 0 && number_2 != 0)
     {
-        if (number_1 * number_2 / NOD(number_1, number_2) > 0)
+        if (number_1 / NOD(number_1, number_2) * number_2 > 0)
         {
-            return number_1 * number_2 / NOD(number_1, number_2);
+            return number_1 / NOD(number_1, number_2) * number_2;
         }
         else
         {
-            return -(number_1 * number_2 / NOD(number_1, number_2));
+            return -(number_1 / NOD(number_1, number_2) * number_2);
         }
     }
 }
