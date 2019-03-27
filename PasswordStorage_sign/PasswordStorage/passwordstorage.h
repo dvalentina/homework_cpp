@@ -6,11 +6,11 @@
 std::string EncodeString(const std::string& string_to_encode);
 std::string DecodeString(const std::string& string_to_decode);
 
-/*struct StorageEntry
+struct StorageEntry
 {
     std::string login;
     std::string password;
-};*/
+};
 
 class PasswordStorage
 {

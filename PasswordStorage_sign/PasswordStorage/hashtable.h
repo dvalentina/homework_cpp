@@ -4,11 +4,7 @@
 #include <vector>
 #include <string>
 
-struct StorageEntry
-{
-    std::string login;
-    std::string password;
-};
+struct StorageEntry;
 
 int GetHash1(const std::string& value);
 int GetHash2(const std::string& value);

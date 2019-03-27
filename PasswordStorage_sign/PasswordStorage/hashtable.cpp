@@ -5,8 +5,6 @@
 #include <string>
 #include <iostream>
 
-struct StorageEntry;
-
 int GetHash1(const std::string& value)
 {
     //Возвращает 1
