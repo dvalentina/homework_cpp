@@ -22,7 +22,8 @@ int main()
         }
     }
 
-    Matrix result = matrix1 * matrix2;
-
+    {LOG_DURATION("time")
+        Matrix result = matrix1 * matrix2;
+    }
     return 0;
 }

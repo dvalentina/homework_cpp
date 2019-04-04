@@ -8,35 +8,35 @@
 
 std::istream& operator>>(std::istream& input_stream, Matrix& matrix)
 {
-	for (size_t y = 0; y < matrix.GetHeight(); y++)
-	{
-		for (size_t x = 0; x < matrix.GetWidth(); x++)
-		{
-			int temp_int = 0;
-			input_stream >> temp_int;
-			matrix.SetValue(y, x, temp_int);
-		}
-	}
+    for (size_t y = 0; y < matrix.GetHeight(); y++)
+    {
+        for (size_t x = 0; x < matrix.GetWidth(); x++)
+        {
+            int temp_int = 0;
+            input_stream >> temp_int;
+            matrix.SetValue(y, x, temp_int);
+        }
+    }
 
-	return input_stream;
+    return input_stream;
 }
 
 std::ostream& operator<<(std::ostream& output_stream, const Matrix& matrix)
 {
-	for (size_t i = 0; i < matrix.GetHeight(); ++i)
-	{
-		output_stream << "|";
-		for (size_t j = 0; j < matrix.GetWidth(); ++j)
-		{
-			output_stream << matrix.GetValue(i, j);
-			if (j != matrix.GetWidth() - 1)
-			{
-				output_stream << " ";
-			}
-		}
-		output_stream << "|" << std::endl;
-	}
-	return output_stream;
+    for (size_t i = 0; i < matrix.GetHeight(); ++i)
+    {
+        output_stream << "|";
+        for (size_t j = 0; j < matrix.GetWidth(); ++j)
+        {
+            output_stream << matrix.GetValue(i, j);
+            if (j != matrix.GetWidth() - 1)
+            {
+                output_stream << " ";
+            }
+        }
+        output_stream << "|" << std::endl;
+    }
+    return output_stream;
 }
 
 Matrix::Matrix()
@@ -60,7 +60,7 @@ Matrix::Matrix(const size_t height, const size_t width)
 
 size_t Matrix::GetHeight() const
 {
-	return data_.size();
+    return data_.size();
 }
 
 size_t Matrix::GetWidth() const
@@ -77,13 +77,13 @@ size_t Matrix::GetWidth() const
 
 int Matrix::GetValue(const size_t height_index, const size_t width_index) const
 {
-	return data_[height_index][width_index];
+    return data_[height_index][width_index];
 }
 
 void Matrix::SetValue(const size_t height_index, const size_t width_index,
-	const int value)
+    const int value)
 {
-	data_[height_index][width_index] = value;
+    data_[height_index][width_index] = value;
 }
 
 std::vector<std::vector<int>> Matrix::GetData() const
@@ -98,15 +98,15 @@ void Matrix::SetData(std::vector<std::vector<int>> data)
 
 Matrix Matrix::Transpose() const
 {
-	Matrix transposed_matrix(this->GetWidth(), this->GetHeight());
-	for (size_t i = 0; i < transposed_matrix.GetHeight(); ++i)
-	{
-		for (size_t j = 0; j < transposed_matrix.GetWidth(); ++j)
-		{
-			transposed_matrix.SetValue(i, j, this->GetValue(j, i));
-		}
-	}
-	return transposed_matrix;
+    Matrix transposed_matrix(this->GetWidth(), this->GetHeight());
+    for (size_t i = 0; i < transposed_matrix.GetHeight(); ++i)
+    {
+        for (size_t j = 0; j < transposed_matrix.GetWidth(); ++j)
+        {
+            transposed_matrix.SetValue(i, j, this->GetValue(j, i));
+        }
+    }
+    return transposed_matrix;
 }
 
 Matrix MultiplicateMatrices(const Matrix& lhs, const Matrix& rhs, const size_t begin_height_pos, const size_t end_height_pos)
@@ -139,35 +139,49 @@ Matrix Matrix::operator*(const Matrix& rhs)
 
     Matrix result(this->GetHeight(), rhs.GetWidth());
 
-    /*{LOG_DURATION("sync")
-        result = MultiplicateMatrices(*this, rhs, 0, this->GetHeight());
-    }*/
-
-    {LOG_DURATION("async")
-        const size_t threads_count = 4;
-        std::vector<std::future<Matrix>> partials;
-        partials.reserve(threads_count);
-        const size_t height_part_size = (size_t)(this->GetHeight() / threads_count);
-
-        for (size_t i = 0; i < threads_count; ++i)
+    //sync not chance-friendly
+    for (size_t i = 0; i < result.GetHeight(); ++i)
+    {
+        for (size_t j = 0; j < result.GetWidth(); ++j)
         {
-            const size_t begin_height_pos = i * height_part_size;
-            const size_t end_height_pos = (i + 1 == threads_count) ?
-                this->GetHeight() : (i + 1) * height_part_size;
-            std::future<Matrix> partial_matrix_multiplication = std::async(
-                std::launch::async,
-                MultiplicateMatrices, *this, rhs, begin_height_pos, end_height_pos
-            );
-            partials.push_back(std::move(partial_matrix_multiplication));
-        }
-        std::cerr << "All threads started" << std::endl;
-
-        for (size_t i = 0; i < threads_count; ++i)
-        {
-            std::cerr << "Waiting thread #" << i << std::endl;
-            result = result + partials[i].get();
+            int new_value = 0;
+            for (size_t k = 0; k < this->GetWidth(); ++k)
+            {
+                new_value += this->GetValue(i, k) * rhs.GetValue(k, j);
+            }
+            result.SetValue(i, j, new_value);
         }
     }
+
+    //sync cache-friendly
+    //result = MultiplicateMatrices(*this, rhs, 0, this->GetHeight());
+    
+
+    //async cache-friendly
+    /*const size_t threads_count = 4;
+    std::vector<std::future<Matrix>> partials;
+    partials.reserve(threads_count);
+    const size_t height_part_size = (size_t)(this->GetHeight() / threads_count);
+
+    for (size_t i = 0; i < threads_count; ++i)
+    {
+        const size_t begin_height_pos = i * height_part_size;
+        const size_t end_height_pos = (i + 1 == threads_count) ?
+            this->GetHeight() : (i + 1) * height_part_size;
+        std::future<Matrix> partial_matrix_multiplication = std::async(
+            std::launch::async,
+            MultiplicateMatrices, *this, rhs, begin_height_pos, end_height_pos
+        );
+        partials.push_back(std::move(partial_matrix_multiplication));
+    }
+    std::cerr << "All threads started" << std::endl;
+
+    for (size_t i = 0; i < threads_count; ++i)
+    {
+        std::cerr << "Waiting thread #" << i << std::endl;
+        result = result + partials[i].get();
+    }*/
+    
     return result;
 }
 

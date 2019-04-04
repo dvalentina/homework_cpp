@@ -239,13 +239,8 @@ void ReceiveAndPrintMessages(
         }
         // Printing recieved message 
         out_stream << "Remote person: ";
-        std::string remote_message;
-        for (int i = 0; i < received_message_size; ++i)
-        {
-            remote_message.push_back(received_message_buf[i]);
-        }
+        std::string remote_message(received_message_buf, received_message_size);
         out_stream << DecodeString(remote_message);
-        //out_stream.write(received_message_buf, received_message_size);
         out_stream << std::endl;
     }
 
