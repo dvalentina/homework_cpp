@@ -1,0 +1,12 @@
+﻿  world.cpp
+  snake.cpp
+c:\users\валя\documents\visual studio 2015\projects\snake\snake\snake.cpp(84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  main.cpp
+  game.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  window.cpp
+  snake.vcxproj -> C:\Users\Валя\documents\visual studio 2015\Projects\snake\x64\Debug\snake.exe
+  snake.vcxproj -> C:\Users\Валя\documents\visual studio 2015\Projects\snake\x64\Debug\snake.pdb (Full PDB)
