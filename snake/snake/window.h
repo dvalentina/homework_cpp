@@ -5,6 +5,7 @@
 
 //#include "world.h"
 class World;
+class MessageBox;
 
 class Window
 {
@@ -16,6 +17,7 @@ public:
     void BeginDraw();
     void Draw(sf::Drawable& drawable_object);
     void Draw(World& world);
+    void Draw(MessageBox& message_box);
     void EndDraw();
 
     bool CheckIsDone();

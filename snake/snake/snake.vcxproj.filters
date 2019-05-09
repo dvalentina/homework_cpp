@@ -36,6 +36,9 @@
     <ClCompile Include="apple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="message_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="game.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="apple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="message_box.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

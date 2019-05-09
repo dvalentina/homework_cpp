@@ -1,6 +1,6 @@
 #include "window.h"
 #include "world.h"
-
+#include "message_box.h"
 
 Window::Window(const std::string& title, const sf::Vector2u& size)
 {
@@ -61,6 +61,11 @@ void Window::Draw(sf::Drawable& drawable_object)
 void Window::Draw(World& world)
 {
     world.Render(window_);
+}
+
+void Window::Draw(MessageBox& message_box)
+{
+    message_box.Render(window_);
 }
 
 void Window::EndDraw()

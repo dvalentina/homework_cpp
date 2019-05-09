@@ -1,24 +1,34 @@
 #include "game.h"
 
+#include <cassert>
+
 extern const sf::Vector2u WINDOW_SIZES(800, 600);
 extern const sf::Vector2i WORLD_SIZES(40, 25);
 extern const float BLOCK_SIZE = 18.0f; // только для отрисовки
 
 Game::Game()
-    : main_window_("Snake", WINDOW_SIZES)
+    : main_window_("Snake", WINDOW_SIZES),
+      message_box_(
+        sf::Vector2i(WORLD_SIZES.x / 4, WORLD_SIZES.y),
+        sf::Vector2i(WORLD_SIZES.x / 2, WORLD_SIZES.y / 2),
+        60
+    )
 {
-    sf::Vector2i apple_position(3, 4);
-    sf::Vector2i snake_position(4, 4);
-    world_.Create(apple_position, snake_position);
+    // for generating random position of apple and snake
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
+
+    world_.Create();
 }
 
 void Game::Run()
 {
-    const float updates_per_seconds = 60.0f;
+    const float updates_per_seconds = 10.0f;
     const sf::Time time_per_update = sf::seconds(1.0f / updates_per_seconds);
 
     sf::Clock clock;
     sf::Time time_sinse_last_update = sf::Time::Zero;
+    world_.snake_.SetScore(0);
+    world_.snake_.SetLives(3);
     while (!main_window_.CheckIsDone())
     {
         time_sinse_last_update += clock.restart();        
@@ -62,8 +72,23 @@ void Game::HandleInput(const float dt)
 void Game::Update(const float dt)
 {
     main_window_.Update(dt);
-
-    world_.Update(dt);
+    if (world_.snake_.GetLives() > 0)
+    {
+        world_.Update(dt);
+    }
+    assert(world_.snake_.GetScore() >= 0);
+    assert(world_.snake_.GetLives() >= 0);
+    if (world_.snake_.GetLives() == 0)
+    {
+        message_box_.Add("Game over!");
+        message_box_.Add("Your score: " + std::to_string(world_.snake_.GetScore()));
+    }
+    else
+    {
+        message_box_.Add("Score: " + std::to_string(world_.snake_.GetScore()));
+        message_box_.Add("Lives: " + std::to_string(world_.snake_.GetLives()));
+    }
+    message_box_.Update(dt);    
 }
 
 
@@ -74,6 +99,6 @@ void Game::Render()
 
     // draw other objects here
     main_window_.Draw(world_);
-
+    main_window_.Draw(message_box_);
     main_window_.EndDraw();
 }

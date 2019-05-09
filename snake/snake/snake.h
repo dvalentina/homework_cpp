@@ -28,15 +28,17 @@ public:
 
     void Create(const sf::Vector2i& head_position);
     
-    //bool CheckSelfCollision() const;
+    bool CheckSelfCollision() const;
     void Grow();
     
     // реализовать эти шесть методов
     Direction GetDirection() const;
     void SetDirection(const Direction new_direction);
     int GetScore() const;
+    void SetScore(const int new_score);
     void IncreaseScore();
     int GetLives() const;
+    void SetLives(const int new_lives);
     void DecreaseLives();
 
     sf::Vector2i GetHeadPosition() const;

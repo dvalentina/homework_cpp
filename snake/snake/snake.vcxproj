@@ -151,6 +151,7 @@
     <ClCompile Include="apple.cpp" />
     <ClCompile Include="game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="message_box.cpp" />
     <ClCompile Include="snake.cpp" />
     <ClCompile Include="wall.cpp" />
     <ClCompile Include="window.cpp" />
@@ -159,6 +160,7 @@
   <ItemGroup>
     <ClInclude Include="apple.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="message_box.h" />
     <ClInclude Include="snake.h" />
     <ClInclude Include="wall.h" />
     <ClInclude Include="window.h" />

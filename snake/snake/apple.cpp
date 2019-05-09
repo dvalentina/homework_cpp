@@ -24,7 +24,7 @@ void Apple::Render(sf::RenderWindow& window) // отрисовать shape_
     // отрисовываем shape_ в зависимости от position_
     // отрисвываем красным цветом
     sf::CircleShape apple = shape_;
-    apple.setPosition(sf::Vector2f(position_.x * WORLD_SIZES.x, position_.y * WORLD_SIZES.y));
+    apple.setPosition(sf::Vector2f(position_.x * BLOCK_SIZE, position_.y * BLOCK_SIZE));
     apple.setFillColor(sf::Color::Red);
     window.draw(apple);
 }

@@ -2,6 +2,7 @@
 
 #include "window.h"
 #include "world.h"
+#include "message_box.h"
 
 class Game
 {
@@ -19,7 +20,7 @@ private:
     Window main_window_;
 
     //sf::Vector2f increment_;
-
+    MessageBox message_box_;
     World world_;
 };
 
