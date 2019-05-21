@@ -1,0 +1,13 @@
+﻿  Building Custom Rule C:/Users/Валя/Documents/Visual Studio 2015/Projects/snake_with_cmake/CMakeLists.txt
+  CMake does not need to re-run because C:/Users/╨Т╨░╨╗╤П/Documents/Visual Studio 2015/Projects/snake_with_cmake/bin/CMakeFiles/generate.stamp is up-to-date.
+  main.cpp
+  apple.cpp
+  game.cpp
+  message_box.cpp
+  snake.cpp
+  wall.cpp
+  window.cpp
+  world.cpp
+  Generating Code...
+  snake.vcxproj -> C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\bin\Debug\snake.exe
+  snake.vcxproj -> C:/Users/Валя/Documents/Visual Studio 2015/Projects/snake_with_cmake/bin/Debug/snake.pdb (Full PDB)

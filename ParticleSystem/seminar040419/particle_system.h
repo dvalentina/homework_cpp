@@ -1,3 +1,5 @@
+// теперь с кодировкой всё хорошо
+
 #include <SFML/Graphics.hpp>
 #include <vector>
 
@@ -24,14 +26,14 @@ public:
     void Render(sf::RenderWindow& window);
 
 private:
-    //логика физики
+    //physics
     sf::Vector2f position_;
     sf::Vector2f velocity_;
     sf::Vector2f acceleration_;
     float radius_;
     float mass_;
 
-    //логика отрисовки
+    //graphics
     sf::CircleShape shape_;
 };
 

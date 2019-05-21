@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\apple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\game.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\message_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\snake.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\wall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\src\world.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\apple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\message_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\snake.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\wall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\window.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\include\world.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Валя\Documents\Visual Studio 2015\Projects\snake_with_cmake\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{FA0240E3-EE6F-3F41-A686-E0310D123B8E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{FBAEF181-F519-3083-9457-8E31FE498EDF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

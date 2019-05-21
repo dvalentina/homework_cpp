@@ -1,0 +1,29 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.14/Modules/Platform/WindowsPaths.cmake
+C:/Users/Валя/Documents/Visual Studio 2015/Projects/circle_with_cmake/CMakeLists.txt
+C:/Users/Валя/Documents/Visual Studio 2015/Projects/circle_with_cmake/bin/CMakeFiles/3.14.3/CMakeCCompiler.cmake
+C:/Users/Валя/Documents/Visual Studio 2015/Projects/circle_with_cmake/bin/CMakeFiles/3.14.3/CMakeCXXCompiler.cmake
+C:/Users/Валя/Documents/Visual Studio 2015/Projects/circle_with_cmake/bin/CMakeFiles/3.14.3/CMakeRCCompiler.cmake
+C:/Users/Валя/Documents/Visual Studio 2015/Projects/circle_with_cmake/bin/CMakeFiles/3.14.3/CMakeSystem.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLConfig.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLConfigDependencies.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLConfigVersion.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-debug.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets-release.cmake
+C:/libraries/SFML-2.5.1-windows-vc14-64-bit/SFML-2.5.1/lib/cmake/SFML/SFMLSharedTargets.cmake
