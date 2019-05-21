@@ -58,7 +58,6 @@ public:
     float ComputeDistanceBetween(const ParticleID particle1_id, const ParticleID particle2_id) const;
 
     const Particle& GetParticleByID(const ParticleID particle_id) const;
-    size_t GetSize() const;
 
     //void HandleCollisions(const float dt);
 

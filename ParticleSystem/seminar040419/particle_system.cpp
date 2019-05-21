@@ -67,9 +67,7 @@ void Particle::Push(const sf::Vector2f force, const float dt)
 
 //particle system
 
-using ParticleID = size_t;
-
-ParticleID ParticleSystem::AddParticle(
+ParticleSystem::ParticleID ParticleSystem::AddParticle(
     const sf::Vector2f position, const sf::Vector2f velocity, const sf::Vector2f acceleration, 
     const float radius, const float mass)
 {
@@ -125,7 +123,9 @@ void ParticleSystem::Update(const float dt)
     ApplyGravity();
 
     for (Particle& particle : particles_)
+    {
         particle.Update(dt);
+    }
     
     HandleCollisions();
 }
@@ -168,11 +168,6 @@ void ParticleSystem::Render(sf::RenderWindow& window)
     {
         particle.Render(window);
     }
-}
-
-size_t ParticleSystem::GetSize() const
-{
-    return particles_.size();
 }
 
 void ParticleSystem::ApplyGravity()

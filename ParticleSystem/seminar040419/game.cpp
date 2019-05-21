@@ -108,39 +108,20 @@ void Game::HandleInput(const float dt)
     sf::Vector2f force(0.0f, 0.0f);
     const float force_modulus = 500000.0f;
 
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up))&&(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
-    {
-        force.y -= force_modulus / 1.4;
-        force.x -= force_modulus / 1.4;
-    }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Up))&&(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)))
-    {
-        force.y -= force_modulus / 1.4;
-        force.x += force_modulus / 1.4;
-    }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down))&&(sf::Keyboard::isKeyPressed(sf::Keyboard::Left)))
-    {
-        force.y += force_modulus / 1.4;
-        force.x -= force_modulus / 1.4;
-    }
-    if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) && (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)))
-    {
-        force.y += force_modulus / 1.4;
-        force.x += force_modulus / 1.4;
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+   
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
     {
         force.y -= force_modulus;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
     {
         force.y += force_modulus;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
         force.x -= force_modulus;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
         force.x += force_modulus;
     }
